@@ -937,4 +937,247 @@
               height: 80px;
               font-size: 2rem;
           }
-      }
+      }/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 1200px) {
+    .content {
+        gap: 1rem;
+    }
+    
+    .stats {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 992px) {
+    #nav {
+        padding: 1rem;
+    }
+    
+    .middle-nav {
+        gap: 1rem;
+    }
+    
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .content-left, .content-right {
+        max-width: 100%;
+    }
+    
+    .paragraph {
+        padding-left: 0;
+    }
+    
+    .paragraph .line {
+        position: relative;
+        margin: 0 auto 1rem;
+        transform: none;
+    }
+    
+    #page1, #page2 {
+        flex-direction: column;
+    }
+    
+    #page1 #left, #page1 #right, 
+    #page2 #left, #page2 #right {
+        max-width: 100%;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .right-sidebar {
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .middle-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 1rem;
+    }
+    
+    .middle-nav.active {
+        display: flex;
+    }
+    
+    .middle-nav a {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .search {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .search input {
+        max-width: 100%;
+    }
+    
+    .content-left {
+        padding: 1rem 0;
+    }
+    
+    .buttons {
+        justify-content: center;
+    }
+    
+    .stats {
+        margin-top: 0;
+        padding: 2rem 1rem;
+    }
+    
+    .stat-item {
+        min-width: 120px;
+    }
+    
+    .top, .bottom {
+        justify-content: space-around;
+    }
+    
+    .circle {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    #nav {
+        padding: 0.5rem;
+    }
+    
+    .logo {
+        width: 120px;
+        height: 50px;
+    }
+    
+    .content {
+        padding: 1rem;
+    }
+    
+    .myimg {
+        max-width: 300px;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .stat-item {
+        min-width: 100%;
+    }
+    
+    .top, .bottom {
+        gap: 1rem;
+    }
+    
+    .circle {
+        min-width: 80px;
+    }
+    
+    .gola {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .sec .top, .section .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .sec p {
+        padding-left: 0;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .content-left h1 {
+        font-size: 2rem;
+    }
+    
+    #left h1, #page2 .upper h1 {
+        font-size: 2rem;
+    }
+    
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .buttons button {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .sec:hover, .section:hover, .info-item:hover {
+        transform: none;
+    }
+    
+    .circle:hover {
+        transform: none;
+    }
+    
+    .circle:hover .gola {
+        transform: none;
+    }
+    
+    .buttons button:hover, .social-link:hover, .submit-btn:hover {
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    #nav, .right-sidebar, .buttons, .social-links {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    #main, #page1, #page2, #contact {
+        background: white;
+        color: black;
+    }
+    
+    .content-left h1, #left h1, #page2 .upper h1, .contact-header h1 {
+        background: black;
+        -webkit-text-fill-color: black;
+    }
+}
