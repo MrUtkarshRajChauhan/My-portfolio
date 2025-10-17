@@ -155,6 +155,12 @@
       }
 
       /* MAIN CONTENT */
+      .page0 {
+          width: 100%;
+          height: 80vh;
+          position: relative;
+      }
+
       .content {
           display: flex;
           align-items: center;
@@ -162,7 +168,7 @@
           width: 100%;
           min-height: calc(100vh - 80px);
           padding: 4rem;
-          position: relative;
+
           z-index: 1;
       }
 
@@ -407,18 +413,24 @@
           }
       }
 
-      .content-right .right {
-          width: 10%;
-          height: 100%;
+
+      .content-bottom {
+          width: 40%;
+          height: 10vh;
+          position: absolute;
+          top: 100%;
+          left: 55%;
+          transform: translateX(-50%);
+          z-index: 9;
       }
 
+      /* 
       /* Right Sidebar */
       .right-sidebar {
           width: 100%;
           height: 100%;
           display: flex;
           align-items: center;
-          flex-direction: column;
           gap: 4rem;
       }
 
@@ -448,21 +460,20 @@
           display: flex;
           justify-content: space-around;
           padding: 4rem 8rem;
-          background: rgba(212, 212, 212, 0.1);
-          backdrop-filter: blur(10px);
-          margin-top: -50px;
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(50px);
+          -webkit-backdrop-filter: blur(10px);
+          /* Safari support */
+          /* margin-top: -50px; */
           position: relative;
           z-index: 2;
       }
 
-      .stat-item {
-          text-align: center;
-          color: #2b2b2b;
-      }
+
 
       .stat-item h2 {
           font-size: 3rem;
-          background: linear-gradient(135deg, #ea6666 0%, rgb(179, 179, 179) 100%);
+          background: linear-gradient(135deg, #ef4a4a 0%, rgb(74, 74, 74) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -471,7 +482,7 @@
 
       .stat-item p {
           font-size: 1rem;
-          color: #2b2b2b;
+          color: #d5d5d5;
       }
 
       /* PAGE 1 - SERVICES */
@@ -576,7 +587,7 @@
       /* PAGE 2 - SKILLS & EXPERIENCE */
       #page2 {
           width: 100%;
-          min-height: 100vh;
+          min-height: 90vh;
           background: linear-gradient(135deg, #ffffff 0%, #d4d4d4 100%);
           display: flex;
           padding: 8rem 4rem;
